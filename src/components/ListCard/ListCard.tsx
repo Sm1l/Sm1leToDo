@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import styles from "./ListCard.module.scss";
 import { TList, deleteList } from "../../Store/ListStore";
-import { AddButton } from "../AddButton";
 import { AddNewToDo } from "../AddNewToDo";
 import { ToDosContainer } from "../ToDosContainer";
-import { DeleteButton } from "../DeleteButton";
 import { useActiveListStore, setActiveList } from "../../Store/ActiveListStore";
 import { RoundButton } from "../RoundButton";
 import { AnimateRoundButton } from "../RoundButton/AnimateRoundButton";

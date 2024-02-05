@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Layout.module.scss";
+// import styles from "./Layout.module.scss";
 import { Outlet } from "react-router-dom";
 import { Main } from "../../components/Main";
 import { Footer } from "../../components/Footer";

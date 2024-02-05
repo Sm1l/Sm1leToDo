@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./ToDoItem.module.scss";
 import { TList, TTodo, toggleToDo, deleteToDo } from "../../Store/ListStore";
-import { AnimatePresence, delay, motion, transform } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { AnimateRoundButton } from "../RoundButton/AnimateRoundButton";
 import { RoundButton } from "../RoundButton";
 

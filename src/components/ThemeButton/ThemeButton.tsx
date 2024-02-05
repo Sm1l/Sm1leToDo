@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from "react";
 
 import styles from "./ThemeButton.module.scss";
-import { TTheme } from "../Header";
+import { TTheme } from "../../Store/ThemeStore";
 
 interface ThemeButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   bgc: TTheme;

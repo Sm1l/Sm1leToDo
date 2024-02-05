@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Navigation.module.scss";
 import { CustomLink } from "../CustomLink";
-import { FcTodoList, FcLock, FcPlus, FcList } from "react-icons/fc";
+import { FcLock, FcList } from "react-icons/fc";
 
 interface NavigationProps {}
 

@@ -1,5 +1,6 @@
 {
   "name": "Sm1leToDo",
+  "homepage": "https://.github.io/Sm1leToDo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +11,10 @@
     "preview": "vite preview",
     "component": "generate-react component",
     "stylelint": "stylelint '**/*{.css,.scss}'",
-    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "dependencies": {
     "framer-motion": "^11.0.3",
