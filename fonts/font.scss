@@ -1,0 +1,22 @@
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  text-shadow: var(--textShadow);
+}
+
+@media (min-width: 867px) {
+  body {
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    letter-spacing: 0.4rem;
+    font-size: 1rem;
+  }
+}
