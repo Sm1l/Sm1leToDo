@@ -1,0 +1,105 @@
+.toDoItem {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  min-height: 36px;
+  padding-right: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.label,
+.checkbox,
+.customCheckbox {
+  cursor: pointer;
+}
+
+.label {
+}
+
+.labelActive {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  position: absolute;
+
+  visibility: hidden;
+
+  appearance: none;
+}
+
+.customCheckbox {
+  position: relative;
+
+  display: block;
+
+  width: 16px;
+  height: 16px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--colors-ui-base);
+  aspect-ratio: 1;
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 3px);
+    left: calc(50% - 3px);
+    content: "";
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: var(--colors-text);
+  }
+}
+
+.customCheckbox:has(input:checked) {
+  background-color: var(--colors-text);
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    content: "";
+
+    width: 3px;
+    min-height: 12px;
+
+    border-radius: 1px;
+
+    background-color: var(--colors-ui-base);
+
+    transform: rotate(35deg);
+  }
+
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    content: "";
+
+    width: 3px;
+    min-height: 8px;
+
+    border-radius: 1px;
+
+    background-color: var(--colors-ui-base);
+
+    transform: rotate(-45deg);
+  }
+}

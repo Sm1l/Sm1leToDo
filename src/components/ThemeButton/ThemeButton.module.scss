@@ -1,0 +1,45 @@
+.themeButton {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: var(--shadow);
+
+  transition: all 300ms ease-out;
+}
+
+.themeButtonWhite {
+  background-color: var(--colorWhite);
+}
+
+.themeButtonBlue {
+  background-color: var(--colorBlue);
+}
+
+.themeButtonOrange {
+  background-color: var(--colorOrange);
+}
+
+@media (hover: hover) {
+  .themeButton:hover {
+    box-shadow: var(--textShadow);
+
+    transform: translateY(-3px);
+  }
+
+  .themeButtonWhite:hover {
+    background-color: var(--colorGrey);
+  }
+
+  .themeButtonBlue:hover {
+    background-color: var(--colorDarkBlue);
+  }
+
+  .themeButtonOrange:hover {
+    background-color: var(--colorOrange);
+  }
+}

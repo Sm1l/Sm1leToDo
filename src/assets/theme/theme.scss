@@ -1,0 +1,93 @@
+//*orange theme
+body[data-theme="orange"] {
+  --colors-text: #0c0c5d;
+  --colors-bg: #fe4c00;
+  --colors-ui-base: #e67847;
+  --colors-link: #0c0c5d;
+  --colors-link-hover: #4040b7;
+  --colors-error: #dede43;
+  --container-shadow: -10px -10px 15px rgba(252, 111, 63, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.2);
+  --hover-container-shadow: -10px -10px 15px rgba(252, 111, 63, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.2),
+    inset -10px -10px 15px rgba(252, 111, 63, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.2);
+}
+
+body[data-theme="orange"] header,
+body[data-theme="orange"] main,
+body[data-theme="orange"] footer {
+  background-color: var(--colors-bg);
+  background-image: linear-gradient(90deg, #fe4c00, #e67847);
+}
+
+body[data-theme="orange"] .ui-block {
+  background-color: var(--colors-ui-base);
+  background-image: linear-gradient(270deg, #fe4c00, #e67847);
+}
+
+//*blue theme
+body[data-theme="blue"] {
+  --colors-text: #e67847;
+  --colors-bg: #0c0c5d;
+  --colors-ui-base: #4040b7;
+  --colors-link: #e67847;
+  --colors-link-hover: #ffbc61;
+  --colors-error: #f94b1f;
+
+  --container-shadow: -10px -10px 15px rgba(63, 98, 252, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.4);
+  --hover-container-shadow: -10px -10px 15px rgba(63, 98, 252, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.4),
+    inset -10px -10px 15px rgba(63, 98, 252, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.4);
+}
+
+body[data-theme="blue"] header,
+body[data-theme="blue"] main,
+body[data-theme="blue"] footer {
+  background-color: var(--colors-bg);
+  background-image: linear-gradient(90deg, #0c0c5d, #4040b7);
+}
+
+body[data-theme="blue"] .ui-block {
+  background-color: var(--colors-ui-base);
+  background-image: linear-gradient(270deg, #0c0c5d, #4040b7);
+}
+
+//*white theme
+body[data-theme="white"] {
+  --colors-text: #070707;
+  --colors-bg: #b6c3ca;
+  --colors-ui-base: #ffffff;
+  --colors-link: #070707;
+  --colors-link-hover: #585859;
+  --colors-error: #f94b1f;
+
+  --container-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  --hover-container-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+body[data-theme="white"] header,
+body[data-theme="white"] main,
+body[data-theme="white"] footer {
+  background-color: var(--colors-bg);
+  background-image: linear-gradient(90deg, #b6c3ca, #ffffff);
+}
+
+body[data-theme="white"] .ui-block {
+  background-color: var(--colors-ui-base);
+  background-image: linear-gradient(270deg, #b6c3ca, #ffffff);
+}
+
+//*all
+body {
+  color: var(--colors-text);
+
+  background-color: var(--colors-bg);
+
+  transition: color 300ms ease-out, background-color 500ms ease-out;
+}
+
+.ui-block {
+  background-color: var(--colors-ui-base);
+
+  // box-shadow: var(--shadow);
+
+  transition: color 300ms ease-out, background-color 500ms ease-out;
+}

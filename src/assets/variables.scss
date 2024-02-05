@@ -1,0 +1,30 @@
+:root {
+  --colorWhite: #ffffff;
+  --colorGrey: #b9b9b9;
+  --colorBlack: #070707;
+
+  --colorDarkBlue: #0c0c5d;
+  --colorBlue: #4040b7;
+  --colorLightBlue: #7da7d6;
+
+  --colorDarkOrange: #fe4c00;
+  --colorOrange: #e67847;
+  --colorLightOrange: #ffbc61;
+
+  //buttons:
+  --colorGreen: #1fcf63;
+  --colorDarkGreen: #0e612e;
+
+  --colorRed: #f94b1f;
+  --colorDarkRed: #9a2305;
+
+  --shadow: rgba(0, 0, 0, 0.4) 0 6px 6px;
+  --shadowTop: rgba(0, 0, 0, 0.4) 0 -6px 6px;
+  --textShadow: rgba(0, 0, 0, 0.4) 0 12px 4px;
+
+  --widthM: 867px;
+  --widthL: 1024px;
+
+  --headerMaxHeight: 80px;
+  --footerMaxHeight: 80px;
+}

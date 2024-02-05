@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  min-height: calc(100% + var(--headerMaxHeight) + var(--footerMaxHeight));
+  padding-top: var(--headerMaxHeight);
+  padding-bottom: var(--footerMaxHeight);
+}

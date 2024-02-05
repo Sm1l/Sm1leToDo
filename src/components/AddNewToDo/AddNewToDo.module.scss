@@ -1,0 +1,39 @@
+.addNewToDo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.input {
+  width: 100%;
+  min-height: 40px;
+  padding: 5px 10px;
+
+  font-weight: 500;
+  letter-spacing: inherit;
+
+  border: 1px solid var(--colors-link-hover);
+  border-radius: 8px;
+
+  background-color: var(--colors-ui-base);
+
+  cursor: pointer;
+}
+
+.inputError {
+  border: 1px solid var(--colorRed);
+}
+
+// .error {
+//   display: block;
+
+//   height: 16px;
+//   padding-bottom: 24px;
+
+//   color: var(--colors-error);
+//   font-size: 0.6rem;
+// }

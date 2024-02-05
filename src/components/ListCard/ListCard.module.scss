@@ -1,0 +1,96 @@
+.listCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 6px;
+
+  border-radius: 12px;
+
+  background-color: var(--colors-ui-base);
+
+  box-shadow: var(--container-shadow);
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: raw;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+
+  color: var(--colors-text);
+
+  border-radius: 10px;
+
+  background-color: transparent;
+
+  box-shadow: var(--container-shadow);
+
+  cursor: pointer;
+
+  transition: all 300ms ease-out;
+}
+
+.mainContainerActive {
+  background-color: var(--colors-bg);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 35%;
+}
+
+.listTitle {
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: var(--textShadow);
+}
+
+.listQuantity {
+  text-shadow: var(--textShadow);
+}
+
+@media (min-width: 867px) {
+  .listCard {
+    padding: 10px;
+  }
+
+  .mainContainer {
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+}
+
+@media (hover: hover) {
+  .mainContainer {
+    &:hover {
+      box-shadow: var(--hover-container-shadow);
+
+      transform: translateY(2px);
+
+      transition: all 300ms ease-out;
+    }
+  }
+}

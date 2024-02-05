@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-height: var(--headerMaxHeight);
+
+  box-shadow: var(--shadow);
+}
+
+.title {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-shadow: var(--textShadow);
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+@media (min-width: 867px) {
+  .title {
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    letter-spacing: 0.8rem;
+  }
+}

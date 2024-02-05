@@ -1,0 +1,19 @@
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+@media (min-width: 867px) {
+  .toDoList {
+    padding: 10px;
+  }
+}
