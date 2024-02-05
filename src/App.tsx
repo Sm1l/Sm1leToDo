@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./App.module.scss";
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Route, RouterProvider, createHashRouter, createRoutesFromElements } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { ToDoPage } from "./pages/ToDoPage";
 import { AnotherPage } from "./pages/AnotherPage";
@@ -15,7 +15,8 @@ const App: React.FC<MainProps> = () => {
   return (
     <div className={styles.app} ref={appRef}>
       <RouterProvider
-        router={createBrowserRouter(
+        // router={createBrowserRouter(
+        router={createHashRouter(
           createRoutesFromElements(
             <Route path="/" element={<Layout appRef={appRef} />}>
               <Route path="new" element={<NewListPage />} />
