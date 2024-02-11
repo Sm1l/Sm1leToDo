@@ -16,7 +16,7 @@ export type TList = {
 };
 
 type TListsState = {
-  lists: [] | TList[];
+  lists: TList[] | [];
 };
 
 const initialListValue: TListsState = { lists: [] };
@@ -28,6 +28,10 @@ export const useListStore = create<typeof initialListValue>()(
   )
 );
 
+export const setList = (newListsData: TList[]) => {
+  useListStore.setState({ lists: newListsData });
+};
+
 export const addList = (name: string) =>
   useListStore.setState((state) => ({ ...state, lists: [...state.lists, { id: nanoid(), name, todos: [] }] }));
 
@@ -36,6 +40,23 @@ export const deleteList = (listId: string) => {
     const newLists: TList[] = state.lists.filter((list) => listId !== list.id);
     return { ...state, lists: newLists };
   });
+};
+
+//*toDo
+
+export const setTodos = (listId: string, newTodos: TTodo[]) => {
+  const currentState = useListStore.getState();
+  const listIndex = currentState.lists.findIndex((list) => list.id === listId);
+  if (listIndex !== -1) {
+    const updatedList = {
+      ...currentState.lists[listIndex],
+      todos: newTodos,
+    };
+    useListStore.setState((state) => ({
+      ...state,
+      lists: [...state.lists.slice(0, listIndex), updatedList, ...state.lists.slice(listIndex + 1)],
+    }));
+  }
 };
 
 export const addToDo = (listId: string, todoText: string) =>
@@ -50,7 +71,7 @@ export const addToDo = (listId: string, todoText: string) =>
       };
       const newList = {
         ...state.lists[index],
-        todos: [...state.lists[index].todos, newTodo],
+        todos: [newTodo, ...state.lists[index].todos],
       };
       const newLists = [...state.lists.slice(0, index), newList, ...state.lists.slice(index + 1)];
       return { ...state, lists: newLists };

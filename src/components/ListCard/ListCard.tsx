@@ -55,12 +55,7 @@ const ListCard: React.FC<ListCardProps> = ({ list }) => {
   };
 
   return (
-    <motion.div
-      initial={{ x: -100 }}
-      animate={{ x: 0, transition: { duration: 0.3, type: "spring" } }}
-      exit={{ x: 3000, transition: { duration: 1 } }}
-      className={`${styles.listCard} ${"ui-block"}`}
-    >
+    <motion.div className={`${styles.listCard} ${"ui-block"}`}>
       <div
         className={
           listIsActive() ? ` ${styles.mainContainer} ${styles.mainContainerActive}` : `${styles.mainContainer}`

@@ -9,36 +9,11 @@ import { RoundButton } from "../RoundButton";
 interface ToDoItemProps {
   list: TList;
   todo: TTodo;
-  index: number;
 }
 
-const listVariants = {
-  visible: (i: number) => ({
-    opacity: 1,
-    transition: { delay: i * 0.1 },
-  }),
-  hidden: {
-    opacity: 0,
-    transition: { delay: 0.2 },
-  },
-  delete: {
-    x: 1500,
-    opacity: 0,
-    transition: { delay: 0.3 },
-  },
-};
-
-const ToDoItem: React.FC<ToDoItemProps> = ({ list, todo, index }) => {
+const ToDoItem: React.FC<ToDoItemProps> = ({ list, todo }) => {
   return (
-    <motion.li
-      className={styles.toDoItem}
-      key={todo.id}
-      variants={listVariants}
-      initial="hidden"
-      animate="visible"
-      exit="delete"
-      custom={index}
-    >
+    <motion.div className={styles.toDoItem} key={todo.id}>
       <div className={styles.info}>
         <label className={styles.customCheckbox}>
           <input
@@ -63,7 +38,7 @@ const ToDoItem: React.FC<ToDoItemProps> = ({ list, todo, index }) => {
           </AnimateRoundButton>
         )}
       </AnimatePresence>
-    </motion.li>
+    </motion.div>
   );
 };
 
