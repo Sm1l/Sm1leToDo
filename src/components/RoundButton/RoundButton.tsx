@@ -2,29 +2,48 @@ import React, { ButtonHTMLAttributes, useState, useEffect } from "react";
 
 import styles from "./RoundButton.module.scss";
 
+type TButton = "add" | "delete" | "reorder";
+
 export interface RoundButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  buttonType: "add" | "delete";
+  buttonType: TButton;
   handleClick: () => void;
 }
 
 const RoundButton: React.FC<RoundButtonProps> = ({ buttonType, handleClick, ...props }) => {
   const [text, setText] = useState<string>("");
 
-  const itIsAddButton = () => {
-    if (buttonType === "add") {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const itIsAddButton = () => {
+  //   if (buttonType === "add") {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
   useEffect(() => {
-    if (itIsAddButton()) {
+    if (buttonType === "add") {
       setText("+");
-    } else {
+    } else if (buttonType === "delete") {
       setText("-");
+    } else if (buttonType === "reorder") {
+      setText("↔");
     }
   }, []);
+
+  const setButtonClassName = (buttonType: TButton) => {
+    switch (buttonType) {
+      case "add":
+        return `${styles.roundButton} ${styles.addButton}`;
+
+      case "delete":
+        return `${styles.roundButton} ${styles.deleteButton}`;
+
+      case "reorder":
+        return `${styles.roundButton} ${styles.reorderButton}`;
+      default:
+        return "";
+    }
+  };
 
   const stopPropagationHandleClick = (e: React.MouseEvent, handleClick: () => void) => {
     e.stopPropagation();
@@ -34,7 +53,8 @@ const RoundButton: React.FC<RoundButtonProps> = ({ buttonType, handleClick, ...p
   return (
     <button
       className={
-        itIsAddButton() ? `${styles.roundButton} ${styles.addButton}` : `${styles.roundButton} ${styles.deleteButton}`
+        setButtonClassName(buttonType)
+        // itIsAddButton() ? `${styles.roundButton} ${styles.addButton}` : `${styles.roundButton} ${styles.deleteButton}`
       }
       onClick={(e) => stopPropagationHandleClick(e, handleClick)}
       {...props}

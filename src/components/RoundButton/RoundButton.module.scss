@@ -31,3 +31,8 @@
   background-color: var(--colorRed);
   background-image: radial-gradient(var(--colorRed), var(--colorDarkRed));
 }
+
+.reorderButton {
+  background-color: var(--colorGrey);
+  background-image: linear-gradient(90deg, #b6c3ca, #ffffff);
+}

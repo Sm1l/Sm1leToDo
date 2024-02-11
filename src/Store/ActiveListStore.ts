@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-export type TActiveList = { activeListId: string };
 const initialActiveListValue = { activeListId: "" };
 
 export const useActiveListStore = create<typeof initialActiveListValue>()(

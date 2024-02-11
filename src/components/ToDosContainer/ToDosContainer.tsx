@@ -2,6 +2,7 @@ import React from "react";
 
 import { setTodos, TList, TTodo } from "../../Store/ListStore";
 import styles from "./ToDosContainer.module.scss";
+import { useReorderStore } from "../../Store/ReorderStore";
 
 import { AnimatePresence, Reorder } from "framer-motion";
 import { ToDoItem } from "../ToDoItem";
@@ -11,6 +12,8 @@ interface ToDosContainerProps {
 }
 
 const ToDosContainer: React.FC<ToDosContainerProps> = ({ list }) => {
+  const reorderIsActive = useReorderStore((state) => state.reorderIsActive);
+
   const setTodosInList = (newTodo: TTodo[]) => {
     return setTodos(list.id, newTodo);
   };
@@ -57,6 +60,7 @@ const ToDosContainer: React.FC<ToDosContainerProps> = ({ list }) => {
             exit="delete"
             custom={i}
             whileDrag={{ scale: 1.05 }}
+            drag={reorderIsActive}
           >
             <ToDoItem list={list} todo={todo} />
           </Reorder.Item>

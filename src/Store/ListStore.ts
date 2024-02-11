@@ -28,8 +28,8 @@ export const useListStore = create<typeof initialListValue>()(
   )
 );
 
-export const setList = (newListsData: TList[]) => {
-  useListStore.setState({ lists: newListsData });
+export const setList = (newLists: TList[]) => {
+  useListStore.setState({ lists: newLists });
 };
 
 export const addList = (name: string) =>
