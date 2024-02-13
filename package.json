@@ -12,7 +12,7 @@
     "component": "generate-react component",
     "stylelint": "stylelint '**/*{.css,.scss}'",
     "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run stylelint:fix",
     "deploy": "gh-pages -d dist"
 
   },
