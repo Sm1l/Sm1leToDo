@@ -13,16 +13,12 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ bgc, onClick, ...props }) => 
     switch (bgc) {
       case "blue":
         return styles.themeButtonBlue;
-        break;
       case "orange":
         return styles.themeButtonOrange;
-        break;
       case "white":
         return styles.themeButtonWhite;
-        break;
       case "dark":
         return styles.themeButtonDark;
-        break;
 
       default:
         return "";

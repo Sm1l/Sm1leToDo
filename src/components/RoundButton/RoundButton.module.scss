@@ -28,11 +28,11 @@
 }
 
 .deleteButton {
-  background-color: var(--colorRed);
-  background-image: radial-gradient(var(--colorRed), var(--colorDarkRed));
+  background-color: var(--colorOrange);
+  background-image: radial-gradient(var(--colorOrange), var(--colorLightOrange));
 }
 
 .reorderButton {
   background-color: var(--colorGrey);
-  background-image: linear-gradient(90deg, #b6c3ca, #ffffff);
+  background-image: radial-gradient(var(--colorGrey), var(--colorBlack));
 }
