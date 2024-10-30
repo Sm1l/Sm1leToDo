@@ -24,6 +24,10 @@
   background-color: var(--colorOrange);
 }
 
+.themeButtonDark {
+  background-color: var(--colorDark);
+}
+
 @media (hover: hover) {
   .themeButton:hover {
     box-shadow: var(--textShadow);

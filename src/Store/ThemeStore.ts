@@ -1,9 +1,10 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-export type TTheme = "blue" | "orange" | "white";
+export type TTheme = "blue" | "orange" | "white" | "dark";
+export type TThemeWithEmpty = TTheme | "";
 
-const initialThemeValue = { theme: "" };
+const initialThemeValue = { theme: "" as TThemeWithEmpty };
 
 export const useThemeStore = create<typeof initialThemeValue>()(
   devtools(

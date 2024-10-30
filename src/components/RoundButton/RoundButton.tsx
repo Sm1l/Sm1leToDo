@@ -12,14 +12,6 @@ export interface RoundButtonProps extends ButtonHTMLAttributes<HTMLButtonElement
 const RoundButton: React.FC<RoundButtonProps> = ({ buttonType, handleClick, ...props }) => {
   const [text, setText] = useState<string>("");
 
-  // const itIsAddButton = () => {
-  //   if (buttonType === "add") {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // };
-
   useEffect(() => {
     if (buttonType === "add") {
       setText("+");

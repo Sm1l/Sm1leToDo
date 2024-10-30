@@ -20,6 +20,9 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ bgc, onClick, ...props }) => 
       case "white":
         return styles.themeButtonWhite;
         break;
+      case "dark":
+        return styles.themeButtonDark;
+        break;
 
       default:
         return "";

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./ToDoItem.module.scss";
 import { TList, TTodo, toggleToDo, deleteToDo } from "../../Store/ListStore";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { AnimateRoundButton } from "../RoundButton/AnimateRoundButton";
 import { RoundButton } from "../RoundButton";
 
@@ -13,7 +13,7 @@ interface ToDoItemProps {
 
 const ToDoItem: React.FC<ToDoItemProps> = ({ list, todo }) => {
   return (
-    <motion.div className={styles.toDoItem} key={todo.id}>
+    <div className={styles.toDoItem} key={todo.id}>
       <div className={styles.info}>
         <label className={styles.customCheckbox}>
           <input
@@ -38,7 +38,7 @@ const ToDoItem: React.FC<ToDoItemProps> = ({ list, todo }) => {
           </AnimateRoundButton>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 };
 

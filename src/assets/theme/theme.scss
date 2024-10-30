@@ -75,6 +75,38 @@ body[data-theme="white"] .ui-block {
   background-image: linear-gradient(270deg, #b6c3ca, #ffffff);
 }
 
+//*dark theme
+body[data-theme="dark"] {
+  --dark-color-background: #21242a;
+  --dark-color-surface-100: #0c0e12;
+  --dark-color-text-primary: #ffffffd9;
+  // --dark-color-stroke: #202025;
+  --dark-color-tag-green-bg: #112421;
+  --dark-color-tag-green-border: #1d5f4d;
+  --dark-color-tag-green-color: #59cbac;
+
+  --colors-text: #ffffffd9;
+  --colors-bg: #21242a;
+  --colors-ui-base: #0c0e12;
+  --colors-link: #59cbac;
+  --colors-link-hover: #1d5f4d;
+  --colors-error: #f94b1f;
+
+  --container-shadow: 5px 5px 10px rgba(89, 203, 173, 0.15);
+  --hover-container-shadow: 10px 10px 15px rgba(89, 203, 173, 0.15), inset -10px -10px 15px rgba(89, 203, 172, 0.15),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.4);
+}
+
+body[data-theme="dark"] header,
+body[data-theme="dark"] main,
+body[data-theme="dark"] footer {
+  background-color: var(--colors-bg);
+}
+
+body[data-theme="dark"] .ui-block {
+  background-color: var(--colors-ui-base);
+}
+
 //*all
 body {
   color: var(--colors-text);
@@ -82,6 +114,11 @@ body {
   background-color: var(--colors-bg);
 
   transition: color 300ms ease-out, background-color 500ms ease-out;
+
+  h1,
+  h2 {
+    color: var(--colors-link);
+  }
 }
 
 .ui-block {
